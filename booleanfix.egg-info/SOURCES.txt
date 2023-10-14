@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+booleanfix/__init__.py
+booleanfix.egg-info/PKG-INFO
+booleanfix.egg-info/SOURCES.txt
+booleanfix.egg-info/dependency_links.txt
+booleanfix.egg-info/top_level.txt
