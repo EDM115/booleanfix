@@ -1,10 +1,13 @@
 from setuptools import setup, find_packages
 
+with open("README.md") as f:
+    long_description = f.read()
+
 setup(
     name="booleanfix",
-    version="1.0.0",
+    version="1.1.0",
     description="Fix for boolean variables in Python",
-    long_description="If you come from another programming language, you may have noticed that Python's boolean variables are a bit different. This module aims to fix that, by giving you boolean variables like you're used to.",
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/EDM115/booleanfix",
     author="EDM115",

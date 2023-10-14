@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: booleanfix
-Version: 1.0.0
+Version: 1.1.0
 Summary: Fix for boolean variables in Python
 Home-page: https://github.com/EDM115/booleanfix
 Author: EDM115
@@ -51,11 +51,16 @@ If you come from another programming language, you may have noticed that Python'
 
 ## The solution
 
-This very simple project gives you boolean variables like you're used to. It's as simple as that.
+This very simple project gives you boolean variables like you're used to. It's as simple as that.  
+*Note* : Since v1.1.0, booleanfix also allows you to use `null` and `undefined` as `None`.
+
+#### Behind the scenes
 
 ```python
 true = True
 false = False
+null = None
+undefined = None
 ```
 
 ## Usage
@@ -63,16 +68,16 @@ false = False
 1. Install the package in your repo
 
 ```bash
-pip install booleanfix==1.0.0
+pip install booleanfix==1.1.0
 ```
 
-__If you use a requirements file, add this line to it :__
+**If you use a requirements file, add this line to it :**
 
 ```bash
-booleanfix==1.0.0
+booleanfix==1.1.0
 ```
 
-2. Use it in your code
+1. Use it in your code
 
 	a. The classic way
 
@@ -92,9 +97,52 @@ booleanfix==1.0.0
 	print(false == False)
 	```
 
+## Example
+
+```python
+from booleanfix import true, false, null, undefined
+
+array = [1, 2, 3, 4, 5]
+for i in range(len((array))):
+	if array[i] % 2 == 0:
+		array[i] = true
+	else:
+		array[i] = false
+
+print(array)
+
+for i in array:
+	print(type(i), isinstance(i, bool), i)
+
+if null == undefined:
+	print("null == undefined")
+
+if array[5] == null:
+	print("array[5] == null")
+```
+
 ## Contributing
 
 Feel free to open an [issue](https://github.com/EDM115/booleanfix/issues) or a [pull request](https://github.com/EDM115/booleanfix/pulls) if you want to contribute to this project
+
+### How to build ?
+
+```bash
+py -m pip install --upgrade pip build twine setuptools wheel
+py -m build
+py -m twine check dist/*
+# Optional : publish to test.pypi.org
+py -m twine upload --repository testpypi dist/*
+# Or to pypi.org
+py -m twine upload dist/*
+```
+
+### How to test ?
+
+```bash
+py -m pip install --upgrade pytest
+py -m pytest
+```
 
 ## License
 
