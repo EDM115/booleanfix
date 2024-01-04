@@ -1,7 +1,8 @@
 repo_name: EDM115/booleanfix
-report_id: fc62a494d06333494ad445b0761332c6
+report_id: db41e14e10fccb66ad015420f50d1b36
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-14T09:43:51+00:00'
+timestamp: '2024-01-04T15:04:45+00:00'
 requested_by: EDM115
 provider: github
 branch: master
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/EDM115/booleanfix
   detection_source: Repo Metadata
 - name: pgvector
   description: Open-source vector similarity search for Postgres
@@ -25,6 +27,7 @@ tools:
   category: Data Stores
   sub_category: Database Tools
   image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/EDM115/booleanfix/blob/master/booleanfix.egg-info/SOURCES.txt
   detection_source: booleanfix.egg-info/SOURCES.txt
   last_updated_by: EDM115
   last_updated_on: 2023-10-14 09:20:19.000000000 Z
@@ -36,6 +39,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/EDM115/booleanfix
   detection_source: Repo Metadata
 - name: LangChain
   description: Build AI apps with LLMs through composability
@@ -45,6 +49,7 @@ tools:
   category: Communications
   sub_category: Large Language Model Tools
   image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/EDM115/booleanfix/blob/master/booleanfix.egg-info/SOURCES.txt
   detection_source: booleanfix.egg-info/SOURCES.txt
   last_updated_by: EDM115
   last_updated_on: 2023-10-14 09:20:19.000000000 Z
