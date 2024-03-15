@@ -1,7 +1,7 @@
 # booleanfix
 
 The most useless pip package so far  
-[![PyPI version](https://badge.fury.io/py/booleanfix.svg)](https://pypi.org/project/booleanfix)
+![PyPI - Version](https://img.shields.io/pypi/v/booleanfix) ![PyPI - Downloads](https://img.shields.io/pypi/dm/booleanfix) ![Pepy Total Downlods](https://img.shields.io/pepy/dt/booleanfix)
   
 ## The problem
 
