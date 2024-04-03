@@ -10,13 +10,17 @@ If you come from another programming language, you may have noticed that Python'
 ## The solution
 
 This very simple project gives you boolean variables like you're used to. It's as simple as that.  
-*Note* : Since v1.1.0, booleanfix also allows you to use `null` and `undefined` as `None`.
+
+> [!NOTE]
+> v1.1.0 added the ability to use `null` and `undefined` as `None`.
+> v1.2.0 added the ability to use `none` as `None`.
 
 #### Behind the scenes
 
 ```python
 true = True
 false = False
+none = None
 null = None
 undefined = None
 ```
@@ -26,39 +30,46 @@ undefined = None
 1. Install the package in your repo
 
 ```bash
-pip install booleanfix==1.1.0
+pip install booleanfix
 ```
 
 **If you use a requirements file, add this line to it :**
 
 ```bash
-booleanfix==1.1.0
+booleanfix==1.2.0
 ```
 
-1. Use it in your code
+1. The classic way
 
-	a. The classic way
+```python
+import booleanfix as bf
 
-	```python
-	import booleanfix as bf
+print(isinstance(bf.true, bool))
+print(bf.false == False)
+```
 
-	print(isinstance(bf.true, bool))
-	print(bf.false == False)
-	```
+2. The easy way
 
-	b. The easy way
+```python
+from booleanfix import true, false
 
-	```python
-	from booleanfix import true, false
+print(isinstance(true, bool))
+print(false == False)
+```
 
-	print(isinstance(true, bool))
-	print(false == False)
-	```
+3. The all-in-one way
+
+```python
+from booleanfix import *
+
+print(isinstance(true, bool))
+print(false == False)
+```
 
 ## Example
 
 ```python
-from booleanfix import true, false, null, undefined
+from booleanfix import *
 
 array = [1, 2, 3, 4, 5]
 for i in range(len((array))):

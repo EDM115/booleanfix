@@ -5,7 +5,7 @@ with open("README.md") as f:
 
 setup(
     name="booleanfix",
-    version="1.1.0",
+    version="1.2.0",
     description="Fix for boolean variables in Python",
     long_description=long_description,
     long_description_content_type="text/markdown",

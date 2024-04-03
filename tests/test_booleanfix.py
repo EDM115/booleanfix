@@ -1,4 +1,4 @@
-from booleanfix import true, false, null, undefined
+from booleanfix import *
 
 def test_true():
     assert true
@@ -86,6 +86,10 @@ def test_undefined():
     assert undefined is None
 
 
+def test_none():
+    assert None is null
+
+
 def test_null_undefined():
     assert null == undefined
 
@@ -94,12 +98,44 @@ def test_null_is_undefined():
     assert null is undefined
 
 
+def test_null_none():
+    assert null == none
+
+
+def test_null_is_none():
+    assert null is none
+
+
 def test_undefined_null():
 	assert undefined == null
 
 
 def test_undefined_is_null():
 	assert undefined is null
+
+
+def test_undefined_none():
+    assert undefined == none
+
+
+def test_undefined_is_none():
+    assert undefined is none
+
+
+def test_none_null():
+    assert none == null
+
+
+def test_none_is_null():
+    assert none is null
+
+
+def test_none_undefined():
+    assert none == undefined
+
+
+def test_none_is_undefined():
+    assert none is undefined
 
 
 def test_null_true():
@@ -116,6 +152,14 @@ def test_undefined_true():
 
 def test_undefined_false():
 	assert undefined != false
+
+
+def test_none_true():
+    assert none != true
+
+
+def test_none_false():
+    assert none != false
 
 
 def test_array_manipulation():
@@ -158,3 +202,19 @@ def test_array_null_comparison():
 
     assert array[5] == null
     assert array[5] is null
+
+
+def test_array_undefined_comparison():
+    array = [1, 2, 3, 4, 5]
+    array.append(undefined)
+
+    assert array[5] == undefined
+    assert array[5] is undefined
+
+
+def test_array_none_comparison():
+    array = [1, 2, 3, 4, 5]
+    array.append(none)
+
+    assert array[5] == none
+    assert array[5] is none
